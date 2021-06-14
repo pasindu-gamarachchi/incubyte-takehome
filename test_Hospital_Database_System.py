@@ -44,7 +44,7 @@ class TestHospitalDatabaseSystem(unittest.TestCase):
         table_cols_str = f"PRAGMA table_info ('{table_name}')"
         table_cols_res = self._HDS.cursor.execute(table_cols_str)
         table_cols_res = self._HDS.cursor.fetchall()
-        print(f"Table col res -> {table_cols_res}")
+        # print(f"Table col res -> {table_cols_res}")
         table_cols = set()
         for col in table_cols_res:
             table_cols.add(col[1])
